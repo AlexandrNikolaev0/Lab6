@@ -6,7 +6,7 @@ public class jsonParser {
      * @return - пара Ключ-Объект
      */
     public static Pair<Integer,Creature> getCreature(String jsonLine)
-    {
+    {//123
         jsonLine=jsonLine.substring(jsonLine.indexOf("{")+1,jsonLine.lastIndexOf("}"));
         String firstPart=jsonLine.substring(0,jsonLine.indexOf(","));
         String secondPart=jsonLine.substring((jsonLine.indexOf(",")+1));
