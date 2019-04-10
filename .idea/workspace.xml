@@ -2,53 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4dc42f3-ec05-4dd4-8c3d-787a7c350af6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Lab6.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AbstractObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AutoRead.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ConsoleHandling.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Creature.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CreatureAssembler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Dog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Finish.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Human.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Map.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NpE.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RealObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Shelter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Sound.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Stick.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/World.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/XException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jsonParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/run.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/save.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AbstractObject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoRead.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ConsoleHandling.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Creature.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CreatureAssembler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dog.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Finish.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Human.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab5.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Map.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NpE.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealObject.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shelter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sound.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stick.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/World.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/XException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jsonParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/save.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1234" beforeDir="false" afterPath="$PROJECT_DIR$/1234" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,11 +13,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/jsonParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+            <state relative-caret-position="270">
+              <caret line="60" column="34" lean-forward="true" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/1234">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -70,13 +43,14 @@
     </leaf>
   </component>
   <component name="Git.Settings">
-    <option name="UPDATE_TYPE" value="REBASE" />
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/jsonParser.java" />
+        <option value="$PROJECT_DIR$/1234" />
       </list>
     </option>
   </component>
@@ -97,6 +71,11 @@
             <path>
               <item name="Lab6" type="b2602c69:ProjectViewProjectNode" />
               <item name="Lab6" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lab6" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lab6" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Lab6" type="b2602c69:ProjectViewProjectNode" />
@@ -134,10 +113,19 @@
       <option name="presentableId" value="Default" />
       <updated>1554894138959</updated>
     </task>
+    <task id="LOCAL-00001" summary="src...">
+      <created>1554894661723</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1554894661723</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
@@ -146,7 +134,7 @@
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24940239" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Version Control" weight="0.32868218" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -194,8 +182,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/jsonParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+        <state relative-caret-position="270">
+          <caret line="60" column="34" lean-forward="true" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1234">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
