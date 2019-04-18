@@ -42,20 +42,20 @@ public class Main {
     World world = new World("Reality");
 
     try {
-        String okrus = args[0];
+        String okrus = System.getenv("PathToInp");
         world.setCreatures(AutoRead.parseStrings(AutoRead.readFromFile(okrus)));
         if (world.getCreatures() != null) {
             world.maxKey = world.getCreatures().size();
             String consoleLine = "";
             while (!consoleLine.equals("exit")) {
                 Scanner reader = new Scanner(System.in);
-                consoleLine = reader.nextLine();
+                consoleLine = reader.nextLine().trim();
                 ConsoleHandling.commandSelecter(consoleLine, world);
             }
         }
     }
-    catch (IndexOutOfBoundsException ioobe){
-    System.out.println("В переменной окружения не задано имя файла");
+    catch (IndexOutOfBoundsException ioobe) {
+    System.out.println("В переменной окружения не задано файла");
     }
 	}
 

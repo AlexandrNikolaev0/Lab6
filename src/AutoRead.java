@@ -27,11 +27,11 @@ public class AutoRead {
             }
             else
             {
-                System.out.println("Файла с введенным именем не существует");
+                System.out.println("Файла по данной переменной окружения не существует");
                 return null;
             }
         } catch (FileNotFoundException fnfe) {
-            System.out.println((fnfe));
+            System.out.println(("Файл не найден или недоступен для чтения/записи"));
             return null;
         }
     }

@@ -1,6 +1,8 @@
 import javafx.util.Pair;
+import jdk.nashorn.internal.codegen.ObjectCreator;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Hashtable;
 
 public class ConsoleHandling {
@@ -12,8 +14,7 @@ public class ConsoleHandling {
     public static void commandSelecter(String consoleLine, World world) {
         String[] commands = {"insert", "show", "remove_lower", "clear", "sort", "info", "remove", "exit"};
         String realCommand = "";
-        Runtime r = Runtime.getRuntime();
-        r.addShutdownHook(new Thread() {
+        Runtime.getRuntime().addShutdownHook(new Thread() {
             public void run() {
                 save(world);
             }
@@ -27,10 +28,10 @@ public class ConsoleHandling {
                 }
             }
         }
-
+        String commandi="Введена неверная команда.\nСписок доступных команд:\n remove_lower {String key}\n " +
+                "remove_lower {element}\n remove {String key}\n insert {String key} {element}\n show\n clear\n info\n sort\n exit";
         if (realCommand.equals("")) {
-            System.out.println("Введена неверная команда.\nСписок доступных команд:\n remove_lower {String key}\n " +
-                    "remove_lower {element}\n remove {String key}\n insert {String key, element}\n show\n clear\n info\n exit");
+            System.out.println(commandi);
         } else {
             switch (realCommand) {
                 case "info":
@@ -59,8 +60,7 @@ public class ConsoleHandling {
 
                     break;
                 default:
-                    System.out.println("Введена неверная команда.\nСписок доступных команд:\n remove_lower {String key}\n " +
-                            "remove_lower {element}\n remove {String key}\n insert {String key}\n show\n clear\n info\n exit");
+                    System.out.println(commandi);
                     break;
             }
 
@@ -157,12 +157,14 @@ public class ConsoleHandling {
 
                 if((consoleLine.indexOf("{") > 0) && (consoleLine.indexOf("}")>0) && (consoleLine.indexOf(":")>0))
                 {
-                    Pair<Integer,Creature> newCreat = jsonParser.getCreature(consoleLine);
-                    if(newCreat.getValue()!=null) {
-                        world.getCreatures().put(newCreat.getKey(), newCreat.getValue());
+                    ArrayList<Object> newCreat = jsonParser.getCreature(consoleLine);
+                    Creature value = (Creature) newCreat.get(1);
+                    int key = (Integer) newCreat.get(0);
+                    if(value!=null) {
+                        world.getCreatures().put(key, value);
                         System.out.println("Элемент успешно добавлен");
-                        if(newCreat.getKey()>world.maxKey)
-                        world.maxKey=newCreat.getKey();
+                        if(key>world.maxKey)
+                        world.maxKey=key;
                     }
 
                 }
@@ -204,7 +206,7 @@ public class ConsoleHandling {
      * */
             public static void commandRemoveLower(String consoleLine,World world) {
                 try {
-                        consoleLine = consoleLine.substring(consoleLine.indexOf("{") + 1, consoleLine.indexOf("}")+1);
+                        consoleLine = consoleLine.substring(consoleLine.indexOf("{") + 1, consoleLine.indexOf("}"));
                         String name = consoleLine.substring(0,consoleLine.indexOf(":"));
                         String value = consoleLine.substring(consoleLine.indexOf(":")+1);
                         value = value.trim();
@@ -218,7 +220,7 @@ public class ConsoleHandling {
                            /* String str = "\"Class\": \"Human\", \"Coord\": 18, \"Name\": \"Alesha\"," +
                                     " \"Phys\": \"STRONG\", \"Sex\": \"m\"";*/
                             String str = value;
-                            str=str.substring(1,str.lastIndexOf("}"));
+                            str=str.substring(1);
                             System.out.println(str);
                             Creature newCreat = jsonParser.readCreature(str);
 

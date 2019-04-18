@@ -3,5 +3,4 @@ public abstract class AbstractObject {
 	public String getMyName() {
 		return name;
 	}
-	// z
 }

@@ -1,16 +1,20 @@
 import javafx.util.Pair;
+
+import java.util.ArrayList;
+
 public class jsonParser {
 
     /**<p>Метод, создающий из json-строки объект в зависимости от параметров в строке</p>
      * @param jsonLine - json-строка
      * @return - пара Ключ-Объект
      */
-    public static Pair<Integer,Creature> getCreature(String jsonLine)
-    {//123
+    public static ArrayList<Object> getCreature(String jsonLine)
+    {
         jsonLine=jsonLine.substring(jsonLine.indexOf("{")+1,jsonLine.lastIndexOf("}"));
-        String firstPart=jsonLine.substring(0,jsonLine.indexOf(","));
-        String secondPart=jsonLine.substring((jsonLine.indexOf(",")+1));
+        String firstPart=jsonLine.substring(0,jsonLine.indexOf("}"));
+        String secondPart=jsonLine.substring((jsonLine.indexOf("}")+1));
         secondPart=secondPart.trim();
+        secondPart=secondPart.substring(1);
         String firstfirst=firstPart.split(":",2)[0].trim();
         String firstsecond=firstPart.split(":",2)[1].trim();
         String secondfirst=secondPart.split(":",2)[0].trim();
@@ -18,23 +22,29 @@ public class jsonParser {
         int key=-1;
         if(firstfirst.equals("\"Key\"")) {
             key = Integer.parseInt(firstsecond.trim());
-
+            //System.out.println(secondfirst+"  "+secondsecond);
 
             if (secondfirst.equals("\"Element\"")) {
                 secondsecond = secondsecond.substring(secondsecond.indexOf("{") + 1, secondsecond.indexOf("}"));
                 Creature creatureClass = readCreature(secondsecond);
-                Pair<Integer, Creature> pair = new Pair<Integer, Creature>(Integer.valueOf(key), creatureClass);
+                ArrayList<Object> pair = new ArrayList<>();
+                pair.add(Integer.valueOf(key));
+                pair.add(creatureClass);
                 return pair;
             } else {
                 System.out.println("Неправильно указан элемент" + secondfirst);
-                Pair<Integer, Creature> pair = new Pair<Integer, Creature>(Integer.valueOf(-1), null);
+                ArrayList<Object> pair = new ArrayList<>();
+                pair.add(Integer.valueOf(-1));
+                pair.add(null);
                 return pair;
             }
         }
         else
         {
             System.out.println("Неправильно введены аргументы. Необходим параметр Key");
-            Pair<Integer, Creature> pair = new Pair<Integer, Creature>(Integer.valueOf(-1), null);
+            ArrayList<Object> pair = new ArrayList<>();
+            pair.add(Integer.valueOf(-1));
+            pair.add(null);
             return pair;
         }
 
